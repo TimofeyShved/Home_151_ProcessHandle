@@ -18,7 +18,7 @@ public class Main {
         processHandle.onExit().thenRun(()-> System.out.println("Консоль закрылась"));
         // так же узнать пользователя
         System.out.println(processHandle.info().user().orElse("no user"));
-        // командная строка видна?
+        // Посмотреть команду в командной строке
         System.out.println(processHandle.info().commandLine().orElse("Нет"));
         // уничтожить процесс
         processHandle.destroy();
